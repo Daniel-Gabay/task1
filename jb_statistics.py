@@ -1,1 +1,1 @@
-print ("hi"aa)
+print ("hi")
