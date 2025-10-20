@@ -108,5 +108,40 @@
 #     print(i)
 
 
+
+
 #שאלה 7
+# להדפיס רק מספרים שלמים בין 1 -20    
+
+# for daniel in  range(1, 21):
+#     if daniel % 2 == 0:
+#         print(daniel)
+
+
+
+
+#שאלה 8 
+
+#משתנה + קלט מהמשתמש 
+N = int(input("Enter N: "))  # שואלים את המשתמש מספר, והופכים אותו למספר שלם
+total = 0                    # הקופה ריקה (הסכום מתחיל ב-0)
+
+for i in range(1, N + 1):    # סופרים 1,2,3,...,N
+    total += i               # מוסיפים לקופה את המספר הנוכחי
+
+print(total)                 # מדפיסים את הסכום
+
+
+
+
+
+
+# import math     
+
+# radius = float(input("Enter the radius of the circle: "))
+
+# circumference = 2 * math.pi * radius
+# print (f"The circumference of the circle is:  {round (circumference, 2)}cm")
+
+
 

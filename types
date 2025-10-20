@@ -1,0 +1,74 @@
+# server_id = 101
+# cpu_usage = 75.3
+# status_msg = "Server is running"
+# is_ready = True
+
+# print(f"the type of server_id is {type(server_id)}")
+# print(f"the type of cpu_id is {type(cpu_usage)}")
+# print(f"the type of status_msg is {type(status_msg)}")
+# print(f"the type of is_ready is {type(is_ready)}")
+
+
+
+
+
+#שאלה 1
+
+# number = float(input("enter a number: "))
+
+# if number > 0: 
+
+#     print ("positive")
+
+# elif number < 0:
+
+#     print("negative")
+
+# else:
+#     print("zero")
+
+
+
+#שאלה 2 
+# student = float(input("Enter numeric grade (0-99): "))
+
+# A = 99
+# B = 80
+# C = 70
+# D = 60
+# E = 50
+# F = 0
+
+# if  0 <=  student <= 100:
+#     if student >= A:
+#         print("A")
+#     elif student > B:
+#         print("B")
+# elif student > C:
+#     print("C")
+# elif student > D:
+#     print("D")
+# elif student > E:
+#     print("E")
+# else:
+#     print("F")
+
+#     print("out of range")
+
+
+
+
+# #שאלה 3 
+# age = float(input("Enter your age: "))
+
+# if 0 <= age <= 12:
+#     print("child")
+# elif 13 <= age <= 17:
+#     print("teenager")
+# else:
+#     print("adult")
+
+
+
+
+

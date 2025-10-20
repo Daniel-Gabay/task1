@@ -74,7 +74,10 @@
 # sum = float(first) + float(second)
 # print("sum: " + str(sum))
 
-first = float(input("first number: "))
-second = float(input("second number: "))
-sum = first + second 
-print (sum)
+# first = float(input("first number: "))
+# second = float(input("second number: "))
+# sum = first + second 
+# print (sum)
+
+# price = 11 
+# print(10 < price < 30)
