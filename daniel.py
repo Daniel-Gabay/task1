@@ -123,13 +123,44 @@
 #שאלה 8 
 
 #משתנה + קלט מהמשתמש 
-N = int(input("Enter N: "))  # שואלים את המשתמש מספר, והופכים אותו למספר שלם
-total = 0                    # הקופה ריקה (הסכום מתחיל ב-0)
+# N = int(input("Enter N: "))  # שואלים את המשתמש מספר, והופכים אותו למספר שלם
+# total = 0                    # הקופה ריקה (הסכום מתחיל ב-0)
 
-for i in range(1, N + 1):    # סופרים 1,2,3,...,N
-    total += i               # מוסיפים לקופה את המספר הנוכחי
+# for i in range(1, N + 1):    # סופרים 1,2,3,...,N
+#     total += i               # מוסיפים לקופה את המספר הנוכחי
 
-print(total)                 # מדפיסים את הסכום
+# print(total)                 # מדפיסים את הסכום
+
+
+
+
+
+
+#מחשבון
+                                                ####### קלט: המספר הראשון ######
+num1 = float(input("Enter the first number: "))
+                                                ######  קלט: סימן פעולה (+ - * /): ######
+operator = input("Enter an operator (+ - * /): ")
+                                                ######קלט: המספר השני ######                            
+num2 = float(input("Enter the second number: "))
+                                                ###### חיבור #####
+if  operator == "+":
+     print (int(num1 + num2))
+                                                ###### חיסור #####
+elif operator == "-":
+      print (int(num1 - num2))
+                                                ###### כפל #####
+elif operator == "*":
+      print (int(num1 * num2))
+                                                ######חילוק:(בדיקה נגד חלוקה באפס #####)
+elif operator == "/":
+     if num2 != 0:
+          print (int(num1 / num2))
+                                                ####### אופרטור לא מוכר #####
+else:
+    print ("Error! Division by zero")
+
+
 
 
 
@@ -142,6 +173,3 @@ print(total)                 # מדפיסים את הסכום
 
 # circumference = 2 * math.pi * radius
 # print (f"The circumference of the circle is:  {round (circumference, 2)}cm")
-
-
-
