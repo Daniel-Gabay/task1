@@ -1,21 +1,14 @@
-import logging
-import json
-class Machine:
-    #The constructor    def __init__(self, name: str, os: str, cpu: int, ram: int):
-    def __init__(self, name: str, os: str, cpu: int, ram: int):
-        self.name = name
-        self.os = os
-        self.cpu = cpu
-        self.ram = ram
+from pydantic import BaseModel, Field, field_validator
 
-        logging.info(f"creating a new machine: {self.name}, os: {self.os}, cpu: {self.cpu}, ram: {self.ram}")
+class Machine(BaseModel):
+    name: str = Field(..., min_length=1, max_length=10)
+    os: str
+    cpu: int = Field(..., gt=0)
+    ram: int = Field(..., gt=0)
 
-    def to_dict(self):
-            return {
-                "name": self.name,
-                "os": self.os,
-                "cpu": self.cpu,
-                "ram": self.ram
-            }
-    
-
+    @field_validator("os")
+    def validate_os(cls, v):
+        allowed = ["ubuntu", "centos", "windows"]
+        if v.lower() not in allowed:
+            raise ValueError("OS must be ubuntu, centos, or windows")
+        return v.lower()

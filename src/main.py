@@ -1,4 +1,4 @@
-import json 
+import json
 from machine import Machine
 
 def save_machine(machine, file_path="src/configs/instances.json"):
@@ -9,9 +9,9 @@ def save_machine(machine, file_path="src/configs/instances.json"):
             data = json.load(file)
     except FileNotFoundError:
         data = []
-        
-    data.append(machine.to_dict())
-    
+
+    data.append(machine.model_dump())
+
 
 
     with open(file_path, "w") as file:
@@ -21,12 +21,12 @@ def save_machine(machine, file_path="src/configs/instances.json"):
 
 
 def read_user():
-    #enter machine name 
+    #enter machine name
         name = input("enter machine name: ").strip()
-        while len(name) >=10: 
-            print("you didn't enter a name . . ")
+        while len(name) >=8:
+            print("your name is more than 8 characters. try again. ")
             name = input("enter machine name: ").strip()
-        
+
 
         #os must be ubuntu, centos or windows
         os = input("Operating System (ubuntu, centos, windows): ").strip()
@@ -52,7 +52,11 @@ def read_user():
         ram = int (ram)
 
 
-        return Machine(name, os, cpu, ram)
+        return Machine(name=name,
+                       os=os,
+                       cpu=cpu,
+                       ram=ram
+                       )
 
 
 print("starting the program . . .")
